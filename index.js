@@ -16,15 +16,7 @@ if (!botToken || !apiKey || !channelId) {
 const bot = new Telegraf(botToken);
 const groq = new Groq({ apiKey: apiKey });
 
-// إضافة سيرفر بسيط لإبقاء البوت نشطاً على Render
-const http = require('http');
-const port = process.env.PORT || 3000;
-http.createServer((req, res) => {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Bot is running!');
-}).listen(port, () => {
-    console.log(`Server running on port ${port}`);
-});
+
 
 // التأكد من أن المستخدم هو المسؤول (Admin)
 bot.use(async (ctx, next) => {
