@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: telegram-channel-bot
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: CHANNEL_ID
+        sync: false
+      - key: ADMIN_ID
+        sync: false
+      - key: ADMIN_USERNAME
+        sync: false

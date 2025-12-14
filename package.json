@@ -1,18 +1,35 @@
 {
   "name": "home-pot",
-  "version": "1.0.0",
-  "description": "",
+  "version": "2.0.0",
+  "description": "بوت تلجرام ذكي لإدارة القنوات باستخدام الذكاء الاصطناعي (Groq AI)",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "dev": "node --watch index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "telegram",
+    "bot",
+    "ai",
+    "groq",
+    "channel-management",
+    "content-generation",
+    "arabic"
+  ],
+  "author": "Jamal Ahmed",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
   "dependencies": {
     "dotenv": "^16.4.5",
     "groq-sdk": "^0.3.3",
     "telegraf": "^4.16.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamall123/Home-pot"
   }
 }
