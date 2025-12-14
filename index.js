@@ -9,6 +9,20 @@ const channelId = process.env.CHANNEL_ID;
 const adminId = process.env.ADMIN_ID;
 const adminUsername = process.env.ADMIN_USERNAME;
 
+// ============ خادم Web لإبقاء البوت نشطاً (Keep-Alive) ============
+const http = require('http');
+const port = process.env.PORT || 3000;
+
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('Bot is working! 🤖\n');
+});
+
+server.listen(port, () => {
+    console.log(`🌍 Keep-alive server running on port ${port}`);
+});
+
 // ============ التحقق من المتطلبات ============
 if (!botToken || !apiKey || !channelId) {
     console.error('❌ خطأ: يرجى التأكد من ملء جميع البيانات في ملف .env');
