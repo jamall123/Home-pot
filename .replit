@@ -1,0 +1,7 @@
+run = "npm start"
+
+[nix]
+channel = "stable-24_05"
+
+[env]
+# Environment variables are better set in the Secrets tab, but general envs can go here.
